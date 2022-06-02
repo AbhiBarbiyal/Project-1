@@ -1,0 +1,39 @@
+.social-container {
+    padding: 25px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.a.social {
+    margin: 0 1rem;
+    transition: transform 250ms;
+    display: inline-block;
+  }
+
+.social:hover {
+    transform: translateY(-2px);
+  }
+
+.youtube {
+    color: #eb3223;
+  }
+  
+.facebook {
+    color: #4968ad;
+  }
+  
+.linkdin {
+    color: #0077b5; 
+  }
+  
+.instagram {
+    color: #833AB4;
+  } 
+
+
+  @media screen and (max-width:480px) {
+    .social-container {
+      flex-wrap: wrap;
+    }
+  }
