@@ -31,34 +31,34 @@ export const Contact = () => {
     };
 
     const subjectChangeHandler = (e) => {
-
+        setEnteredSubject(e.target.value)
     };
     const emailChangeHandler = (e) => {
-
+        setEnteredEmail(e.target.value)
     };
     const messageChangeHandler = (e) => {
-
+        setEnteredMessage(e.target.value)
     };
-    const nameLostFocusHandler = () => {
-        if (enteredName == "") {
-            setNameWasTouched(true);
-        }
-    }
-    const subjectLostFocusHandler = () => {
-        if (enteredName == "") {
-            setSubjectWasTouched(true);
-        }
-    }
-    const emailLostFocusHandler = () => {
-        if (enteredName == "") {
-            setEmailWasTouched(true);
-        }
-    }
-    const messageLostFocusHandler = () => {
-        if (enteredName == "") {
-            setMessageWasTouched(true);
-        }
-    }
+    // const nameLostFocusHandler = () => {
+    //     if (enteredName == "") {
+    //         setNameWasTouched(true);
+    //     }
+    // }
+    // const subjectLostFocusHandler = () => {
+    //     if (enteredName == "") {
+    //         setSubjectWasTouched(true);
+    //     }
+    // }
+    // const emailLostFocusHandler = () => {
+    //     if (enteredName == "") {
+    //         setEmailWasTouched(true);
+    //     }
+    // }
+    // const messageLostFocusHandler = () => {
+    //     if (enteredName == "") {
+    //         setMessageWasTouched(true);
+    //     }
+    // }
 
 
 
@@ -89,17 +89,17 @@ export const Contact = () => {
                     freelancing if the right project comes along. me.
                 </p>
                 <form ref={formRef} onSubmit={handleSubmit} className="contact-form">
-                    {(enteredName === "" && nameWasTouched) && <p className="c-desc-ui">Please Enter Your Name</p>}
-                    <input type="text" placeholder="Name" name="user_name" value={enteredName} onChange={nameChangeHandler} onBlur={nameLostFocusHandler} />
-                    {(enteredSubject === "" && subjectWasTouched) && <p className="c-desc-ui">Please Enter Subject</p>}
+                    {/* {(enteredName === "" && nameWasTouched) && <p className="c-desc-ui">Please Enter Your Name</p>} */}
+                    <input type="text" placeholder="Name" name="user_name" value={enteredName} onChange={nameChangeHandler} />
+                    {/* {(enteredSubject === "" && subjectWasTouched) && <p className="c-desc-ui">Please Enter Subject</p>} */}
 
-                    <input type="text" placeholder="Subject" name="user_subject" value={enteredSubject} onChange={subjectChangeHandler} onBlur={subjectLostFocusHandler} />
-                    {(enteredEmail === "" && emailWasTouched) && <p className="c-desc-ui">Please Enter Your Email</p>}
+                    <input type="text" placeholder="Subject" name="user_subject" value={enteredSubject} onChange={subjectChangeHandler} />
+                    {/* {(enteredEmail === "" && emailWasTouched) && <p className="c-desc-ui">Please Enter Your Email</p>} */}
 
-                    <input type="text" placeholder="Email" name="user_email" value={enteredEmail} onChange={emailChangeHandler} onBlur={emailLostFocusHandler} />
-                    {(enteredMessage === "" && messageWasTouched) && <p className="c-desc-ui">Please Enter Message</p>}
+                    <input type="text" placeholder="Email" name="user_email" value={enteredEmail} onChange={emailChangeHandler} />
+                    {/* {(enteredMessage === "" && messageWasTouched) && <p className="c-desc-ui">Please Enter Message</p>} */}
 
-                    <textarea rows="5" placeholder="Message" name="message" value={enteredMessage} onChange={messageChangeHandler} onBlur={messageLostFocusHandler} />
+                    <textarea rows="5" placeholder="Message" name="message" value={enteredMessage} onChange={messageChangeHandler} />
                     <button>Submit</button>
                 </form>
             </div>
